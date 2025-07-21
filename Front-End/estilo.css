@@ -1,0 +1,91 @@
+/* Reset básico */
+body, h1, h2, p, label, select, input, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* Cabeçalho */
+.header {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Conteúdo principal */
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* Seção de produto */
+.product-section {
+  display: flex;
+  justify-content: center;
+}
+
+.product-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.product-title {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.product-description {
+  color: #666;
+  margin: 10px 0 20px;
+}
+
+.product-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.product-form select,
+.product-form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.product-form button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background-color: #25d366;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.product-form button:hover {
+  background-color: #1ebe5b;
+}
