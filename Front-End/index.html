@@ -1,0 +1,45 @@
+<!-- frontend/index.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Loja de Garrafas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <header class="bg-white shadow p-4 text-center text-2xl font-bold">Loja de Garrafas</header>
+
+  <main class="p-4 max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
+    <div class="bg-white rounded shadow p-4">
+      <img src="https://via.placeholder.com/400x300" alt="Garrafa" class="rounded w-full">
+      <h2 class="text-xl font-semibold mt-4">Garrafa Personalizada</h2>
+      <p class="text-gray-600">Escolha a cor e adicione ao carrinho.</p>
+      <label class="block mt-4">Cor:</label>
+      <select id="color" class="w-full p-2 border rounded mt-1">
+        <option>Preto</option><option>Branco</option><option>Azul</option><option>Rosa</option>
+      </select>
+      <label class="block mt-4">Quantidade:</label>
+      <input id="quantity" type="number" value="1" min="1" class="w-full p-2 border rounded mt-1">
+      <button onclick="addToCart()" class="mt-4 w-full bg-green-500 text-white py-2 rounded hover:bg-green-600">
+        Adicionar ao Carrinho
+      </button>
+    </div>
+  </main>
+
+  <script>
+    function addToCart() {
+      const item = {
+        nome: 'Garrafa Personalizada',
+        cor: document.getElementById('color').value,
+        quantidade: parseInt(document.getElementById('quantity').value),
+        preco: 49.90
+      };
+      const carrinho = JSON.parse(localStorage.getItem('carrinho') || '[]');
+      carrinho.push(item);
+      localStorage.setItem('carrinho', JSON.stringify(carrinho));
+      alert('Produto adicionado ao carrinho!');
+    }
+  </script>
+</body>
+</html>
